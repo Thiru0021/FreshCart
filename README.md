@@ -42,13 +42,13 @@ The core engine relies on the following relational structure inside the `grocery
 ## 📸 Project Preview
 
 ### Customer Storefront
-<img src="screenshots/store_front.png" width="800" alt="FreshCart Storefront Menu">
+<img src="scrennshots/store_front.png" width="800" alt="FreshCart Storefront Menu">
 
 ### Dynamic Shopping Basket
-<img src="screenshots/basket.png" width="800" alt="Shopping Basket View">
+<img src="scrennshots/basket.png" width="800" alt="Shopping Basket View">
 
 ### Admin Logistics Dashboard
-<img src="screenshots/admin_dashboard.png" width="800" alt="Admin Order Queue Control Panel">
+<img src="scrennshots/admin_dashboard.png" width="800" alt="Admin Order Queue Control Panel">
 ---
 
 ## 🚀 Local Installation & Setup
