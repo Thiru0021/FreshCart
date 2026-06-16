@@ -39,6 +39,17 @@ The core engine relies on the following relational structure inside the `grocery
 * **`orders`** - Logistics records storing totals, destination vectors, payment states, and shipping checkpoints.
 
 ---
+## 📸 Project Preview
+
+### Customer Storefront
+<img src="screenshots/storefront.png" width="800" alt="FreshCart Storefront Menu">
+
+### Dynamic Shopping Basket
+<img src="screenshots/basket.png" width="800" alt="Shopping Basket View">
+
+### Admin Logistics Dashboard
+<img src="screenshots/admin_dashboard.png" width="800" alt="Admin Order Queue Control Panel">
+---
 
 ## 🚀 Local Installation & Setup
 
