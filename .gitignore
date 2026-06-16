@@ -1,0 +1,10 @@
+# Ignore local environment configurations
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Ignore any local text logs or temporary uploads
+*.log

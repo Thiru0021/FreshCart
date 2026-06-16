@@ -1,0 +1,619 @@
+/* ==========================================================================
+   FRESHCART CUSTOMER STOREFRONT STYLESHEET (MODERN REMASTER)
+   ========================================================================== */
+
+/* Modern Fluid Reset & Variable Token Matrix */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Sophisticated Color Tokens */
+    --brand-primary: #059669;      /* Deep Emerald Accent */
+    --brand-secondary: #34d399;    /* Mint Tech Mint Glow */
+    --brand-light: #ecfdf5;        /* Soft Sage Wash background tinted wrapper */
+    
+    --slate-900: #0f172a;          /* Charcoal Midnight Base Text */
+    --slate-700: #334155;          /* Heavy Dark Neutral Labels */
+    --slate-400: #94a3b8;          /* Light Muted Neutral Captions */
+    --slate-100: #f1f5f9;          /* Light Element Structural Fills */
+    --canvas-bg: #f8fafc;          /* Ultra-Clean Modern Page Canvas */
+    --card-surface: #ffffff;       /* Pure White High-Contrast Layers */
+    
+    /* Smooth Fluid Animation Coordinates */
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Ethereal Elevation Shadows */
+    --shadow-flat: 0 1px 3px rgba(15, 23, 42, 0.03);
+    --shadow-raised: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+    --shadow-floating: 0 20px 40px -12px rgba(15, 23, 42, 0.08), 0 4px 12px -4px rgba(15, 23, 42, 0.03);
+}
+
+body.shop-body {
+    background-color: var(--canvas-bg);
+    color: var(--slate-900);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 1. Glassmorphic Sticky Header Navigation Bar Layout */
+.shop-navbar {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    height: 76px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition-smooth);
+}
+
+.shop-navbar .brand-logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--brand-primary);
+    text-decoration: none;
+    letter-spacing: -0.75px;
+    display: flex;
+    align-items: center;
+}
+
+.shop-navbar .brand-logo span {
+    color: var(--slate-900);
+}
+
+/* 2. Seamless Unified Search Engine Input Bar */
+.shop-navbar .search-container {
+    flex: 0 1 540px;
+    margin: 0 30px;
+    position: relative;
+}
+
+.shop-navbar .search-bar {
+    width: 100%;
+    padding: 11px 24px;
+    border: 1px solid rgba(203, 213, 225, 0.7);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--canvas-bg);
+    color: var(--slate-900);
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.shop-navbar .search-bar::placeholder {
+    color: var(--slate-400);
+}
+
+.shop-navbar .search-bar:focus {
+    border-color: var(--brand-primary);
+    background-color: var(--card-surface);
+    box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.08);
+}
+
+/* 3. Basket Navigation Interactive Badge Widget */
+.shop-navbar .cart-widget {
+    color: var(--slate-700);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 18px;
+    border-radius: 10px;
+    background-color: var(--canvas-bg);
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    transition: var(--transition-smooth);
+}
+
+.shop-navbar .cart-widget:hover {
+    background-color: var(--brand-light);
+    color: var(--brand-primary);
+    border-color: rgba(5, 150, 105, 0.2);
+}
+
+.shop-navbar .cart-badge {
+    background: var(--brand-primary);
+    color: #ffffff;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* 4. Layout Architecture Master Canvas */
+.shop-main {
+    max-width: 1280px;
+    margin: 30px auto 60px auto;
+    padding: 0 24px;
+}
+
+/* 5. Fluid Modernist Mesh Gradient Hero Marketing Banner */
+.shop-hero-banner {
+    background: radial-gradient(circle at top left, var(--brand-primary), #047857);
+    color: #ffffff;
+    padding: 55px 50px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 12px 30px -10px rgba(4, 120, 87, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.shop-hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(52, 211, 153, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.shop-hero-banner h1 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.75px;
+    line-height: 1.2;
+}
+
+.shop-hero-banner p {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+}
+
+/* 6. High-Fidelity Filtering Systems & Pill Rows */
+.shop-category-bar, .shop-subcategory-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Hide standard bars scroll layouts */
+}
+
+.shop-category-bar::-webkit-scrollbar, 
+.shop-subcategory-bar::-webkit-scrollbar {
+    display: none; /* Hidden look across webkit desktop browsers */
+}
+
+.shop-filter-pill, .sub-filter-pill {
+    background-color: var(--card-surface);
+    color: var(--slate-700);
+    padding: 9px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-flat);
+}
+
+.shop-filter-pill:hover, .sub-filter-pill:hover {
+    border-color: var(--slate-400);
+    background-color: var(--canvas-bg);
+}
+
+.shop-filter-pill.active, .sub-filter-pill.active {
+    background-color: var(--brand-primary) !important;
+    color: #ffffff !important;
+    border-color: var(--brand-primary) !important;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+}
+
+/* 7. Clean High-Contrast Product Catalog Showcase Grid Layout */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    gap: 28px;
+}
+
+.shop-item-card {
+    background: var(--card-surface);
+    border-radius: 16px;
+    border: 1px solid rgba(226, 232, 240, 0.7);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-flat);
+}
+
+.shop-item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-floating);
+    border-color: rgba(203, 213, 225, 0.6);
+}
+
+/* Product Card Sub-elements */
+.shop-card-img-holder {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background-color: var(--canvas-bg);
+    border-radius: 12px;
+    padding: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.shop-card-img-holder img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shop-item-card:hover .shop-card-img-holder img {
+    transform: scale(1.05);
+}
+
+.shop-card-tag {
+    font-size: 10px;
+    color: var(--brand-primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+    margin-bottom: 6px;
+}
+
+.shop-card-title {
+    font-size: 16px;
+    color: var(--slate-900);
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.4;
+    height: 44px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.shop-card-meta {
+    font-size: 12px;
+    color: var(--slate-400);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* Card Financial Metrics Rows Layout */
+.shop-card-pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.shop-card-pricing .current-amt {
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--slate-900);
+}
+
+.shop-card-pricing .strike-amt {
+    font-size: 13px;
+    color: var(--slate-400);
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+/* Dynamic Interactive Fronted Quantity Updaters Controllers */
+.qty-updater-wrapper {
+    background-color: var(--canvas-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 10px !important;
+    padding: 2px;
+}
+
+.qty-btn {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    background: var(--card-surface) !important;
+    box-shadow: var(--shadow-flat);
+    transition: var(--transition-smooth);
+}
+
+.qty-btn:hover {
+    background: var(--slate-100) !important;
+}
+
+.qty-count-text {
+    font-size: 14px !important;
+    color: var(--slate-900) !important;
+    font-weight: 700 !important;
+}
+
+/* Call to Action Main Blueprint Buttons */
+.shop-buy-btn {
+    background-color: var(--brand-primary);
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 11px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.shop-buy-btn:hover {
+    background-color: #047857;
+    box-shadow: 0 6px 16px rgba(4, 120, 87, 0.2);
+}
+
+/* Empty State / Search Fallback Notification System */
+.shop-empty-notice {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 24px;
+    color: var(--slate-700);
+    background: var(--card-surface);
+    border-radius: 16px;
+    border: 1px dashed rgba(203, 213, 225, 0.8);
+}
+
+
+/* ==========================================================================
+   8. BASKET & CHECKOUT COMPONENT PAGE ARCHITECTURE Layout
+   ========================================================================== */
+.basket-wrapper {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 32px;
+    margin-top: 24px;
+}
+
+@media (max-width: 968px) {
+    .basket-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.basket-table-card {
+    background: var(--card-surface);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    box-shadow: var(--shadow-flat);
+}
+
+.basket-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.basket-table th {
+    text-align: left;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--slate-400);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+}
+
+.basket-table td {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--slate-100);
+    vertical-align: middle;
+}
+
+.basket-item-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.basket-item-meta img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    background: var(--canvas-bg);
+    border-radius: 10px;
+    padding: 6px;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.qty-control-btn {
+    background-color: var(--canvas-bg);
+    color: var(--slate-900);
+    border: 1px solid var(--border-color);
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+    transition: var(--transition-smooth);
+}
+
+.qty-control-btn:hover {
+    background-color: var(--slate-100);
+}
+
+.basket-qty-display {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.remove-item-link {
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.remove-item-link:hover {
+    color: #b91c1c;
+}
+
+/* Order Summary Side Sticky Layout Blocks Cards */
+.summary-card {
+    background: var(--card-surface);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    height: fit-content;
+    box-shadow: var(--shadow-raised);
+    position: sticky;
+    top: 106px;
+}
+
+.summary-card h2 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--slate-900);
+    letter-spacing: -0.25px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    color: var(--slate-700);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.summary-row.total-row {
+    border-top: 1px dashed var(--border-color);
+    padding-top: 14px;
+    margin-top: 14px;
+    color: var(--slate-900);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.checkout-btn {
+    background-color: var(--brand-primary);
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 16px;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.checkout-btn:hover {
+    background-color: #047857;
+    box-shadow: 0 6px 16px rgba(4, 120, 87, 0.2);
+}
+
+/* ==========================================================================
+   9. USER INTERACTIVE DROP CONTENT ELEMENT PANEL ARCHITECTURES
+   ========================================================================== */
+.user-profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-trigger {
+    background: var(--card-surface);
+    color: var(--slate-700);
+    border: 1px solid var(--border-color);
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: var(--shadow-flat);
+    transition: var(--transition-smooth);
+    white-space: nowrap;
+}
+
+.profile-trigger:hover {
+    background: var(--canvas-bg);
+    border-color: var(--slate-400);
+}
+
+/* Premium Floating Dropout Card Container Panel Box */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--card-surface);
+    min-width: 210px;
+    box-shadow: var(--shadow-floating);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 12px;
+    padding: 6px 0;
+    margin-top: 8px;
+    z-index: 2000;
+}
+
+.dropdown-menu.show {
+    display: block !important;
+    animation: menuGlowEntrance 0.2s ease-out forwards;
+}
+
+/* Dropdown link elements display layout properties configuration mapping */
+.dropdown-menu a {
+    color: var(--slate-700);
+    padding: 10px 18px;
+    text-decoration: none;
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-align: left;
+    transition: var(--transition-smooth);
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--brand-light);
+    color: var(--brand-primary);
+}
+
+/* Micro-Entrance Hardware Accelerated Layer Animation Mechanics */
+@keyframes menuGlowEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
