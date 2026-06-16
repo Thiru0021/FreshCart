@@ -42,7 +42,7 @@ The core engine relies on the following relational structure inside the `grocery
 ## 📸 Project Preview
 
 ### Customer Storefront
-<img src="screenshots/storefront.png" width="800" alt="FreshCart Storefront Menu">
+<img src="screenshots/store_front.png" width="800" alt="FreshCart Storefront Menu">
 
 ### Dynamic Shopping Basket
 <img src="screenshots/basket.png" width="800" alt="Shopping Basket View">
